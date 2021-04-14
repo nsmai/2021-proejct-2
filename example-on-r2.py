@@ -10,8 +10,6 @@ def coeff_determination(y_true, y_pred):
     SS_res =  K.sum(K.square( y_true-y_pred ))
     SS_tot = K.sum(K.square( y_true - K.mean(y_true) ) )
     r2 =  1 - SS_res/(SS_tot + K.epsilon())
-    if(r2 < 0):
-      return 0.0
     return r2
 
 x_data = [1,2,3,4,5]
